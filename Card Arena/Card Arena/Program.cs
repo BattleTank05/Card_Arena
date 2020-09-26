@@ -27,14 +27,33 @@ namespace Card_Arena
             {
                 Lobby(player);
             }
-            if (userInputInt == 1) 
+            if (userInputInt == 1)
             {
                 Console.WriteLine("----Deck Builder----");
-                for (int i = 0; i < player.playerCardInventory.Length; i++) 
+                for (int i = 0; i < player.playerCardInventory.Length; i++)
                 {
-                    
+
                 }
             }
+            else if (userInputInt == 2) 
+            {
+                Arena fightCatalyst = new Arena();
+                fightCatalyst.StartFight(player);
+            }
+        }
+        public int MathFunctionClamp(int currentValue, int change, int MaxValue)
+        {
+            if (currentValue + change <= 0)
+            {
+                currentValue = 0;
+                return currentValue;
+            }
+            else if (currentValue + change > MaxValue) 
+            {
+                currentValue = MaxValue;
+                return currentValue;
+            }
+            return currentValue + change;
         }
     }
 }

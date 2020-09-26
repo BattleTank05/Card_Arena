@@ -10,19 +10,27 @@ namespace Card_Arena.Decks
 
     }
 
-    class Common_Card : Deck
+    class Common_Card : Card
     {
-        public string rarity = "Common";
-        public int cardDamage;
+        public Common_Card()
+        {
+            rarity = "Common";
+        }
     }
 
-    class Rare_Card : Deck
+    class Rare_Card : Card
     {
-        public string rarity = "Rare";
+        public Rare_Card()
+        {
+            rarity = "Rare";
+        }
     }
 
-    class Legendary_Card : Deck
+    class Legendary_Card : Card
     {
-        public string rarity = "Legendary";
+        public Legendary_Card()
+        {
+            rarity = "Legendary";
+        }
     }
 }
